@@ -1,3 +1,4 @@
+using CNTK;
 namespace SomalilandWeatherForecast
 {
     internal static class Program

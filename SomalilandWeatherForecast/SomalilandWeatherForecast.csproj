@@ -8,4 +8,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="CNTK.CPUOnly" Version="2.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="NeuralNet\" />
+  </ItemGroup>
+
 </Project>
