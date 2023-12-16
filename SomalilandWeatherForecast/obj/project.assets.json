@@ -1,11 +1,120 @@
 {
   "version": 3,
   "targets": {
-    "net8.0-windows7.0": {}
+    "net8.0-windows7.0": {
+      "CNTK.CPUOnly/2.7.0": {
+        "type": "package",
+        "dependencies": {
+          "CNTK.Deps.MKL": "[2.7.0]",
+          "CNTK.Deps.OpenCV.Zip": "[2.7.0]"
+        },
+        "compile": {
+          "lib/netstandard2.0/Cntk.Core.Managed-2.7.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Cntk.Core.Managed-2.7.dll": {}
+        },
+        "build": {
+          "build/netstandard2.0/CNTK.CPUOnly.targets": {}
+        }
+      },
+      "CNTK.Deps.MKL/2.7.0": {
+        "type": "package",
+        "build": {
+          "build/netstandard2.0/CNTK.Deps.MKL.targets": {}
+        }
+      },
+      "CNTK.Deps.OpenCV.Zip/2.7.0": {
+        "type": "package",
+        "build": {
+          "build/netstandard2.0/CNTK.Deps.OpenCV.Zip.targets": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "CNTK.CPUOnly/2.7.0": {
+      "sha512": "jRUSX0QnkYcSak2IGVMeeAzUcv8S22TJH9xxjJlqz7jFpeGUQU4DASOGjP4MDAq5RogBP1Fjm4v52GBSPMgAaA==",
+      "type": "package",
+      "path": "cntk.cpuonly/2.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/native/CNTK.CPUOnly.targets",
+        "build/native/include/CNTKLibrary.h",
+        "build/native/include/CNTKLibraryC.h",
+        "build/native/include/CNTKLibraryInternals.h",
+        "build/native/include/HalfConverter.hpp",
+        "build/native/include/Internals/ComputationGraphAlgorithms.h",
+        "build/native/include/Internals/EvaluatorWrapper.h",
+        "build/native/include/Internals/PrimitiveFunction.h",
+        "build/native/include/Internals/PrimitiveFunctionAttribute.h",
+        "build/native/include/Internals/PrimitiveOpType.h",
+        "build/native/lib/x64/Debug/Cntk.Core-2.7d.lib",
+        "build/native/lib/x64/Release/Cntk.Core-2.7.lib",
+        "build/netstandard2.0/CNTK.CPUOnly.targets",
+        "build/non-supported/include/CNTKLibrary.h",
+        "cntk.cpuonly.2.7.0.nupkg.sha512",
+        "cntk.cpuonly.nuspec",
+        "lib/netstandard2.0/Cntk.Core.Managed-2.7.dll",
+        "support/x64/Debug/Cntk.Composite-2.7d.dll",
+        "support/x64/Debug/Cntk.Core-2.7d.dll",
+        "support/x64/Debug/Cntk.Core.CSBinding-2.7d.dll",
+        "support/x64/Debug/Cntk.Deserializers.Binary-2.7d.dll",
+        "support/x64/Debug/Cntk.Deserializers.HTK-2.7d.dll",
+        "support/x64/Debug/Cntk.Deserializers.Image-2.7d.dll",
+        "support/x64/Debug/Cntk.Deserializers.TextFormat-2.7d.dll",
+        "support/x64/Debug/Cntk.Math-2.7d.dll",
+        "support/x64/Debug/Cntk.PerformanceProfiler-2.7d.dll",
+        "support/x64/Release/Cntk.Composite-2.7.dll",
+        "support/x64/Release/Cntk.Core-2.7.dll",
+        "support/x64/Release/Cntk.Core.CSBinding-2.7.dll",
+        "support/x64/Release/Cntk.Deserializers.Binary-2.7.dll",
+        "support/x64/Release/Cntk.Deserializers.HTK-2.7.dll",
+        "support/x64/Release/Cntk.Deserializers.Image-2.7.dll",
+        "support/x64/Release/Cntk.Deserializers.TextFormat-2.7.dll",
+        "support/x64/Release/Cntk.Math-2.7.dll",
+        "support/x64/Release/Cntk.PerformanceProfiler-2.7.dll"
+      ]
+    },
+    "CNTK.Deps.MKL/2.7.0": {
+      "sha512": "HvWCp8YNO9LKUrnd/ollB2zl75q0LpMRKirDsipSYDscjj6367YIva34v8bkPFtDA5OHRzHItyPCUeH0YGjYeA==",
+      "type": "package",
+      "path": "cntk.deps.mkl/2.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/native/CNTK.Deps.MKL.targets",
+        "build/netstandard2.0/CNTK.Deps.MKL.targets",
+        "cntk.deps.mkl.2.7.0.nupkg.sha512",
+        "cntk.deps.mkl.nuspec",
+        "support/x64/Dependency/libiomp5md.dll",
+        "support/x64/Dependency/mkldnn.dll",
+        "support/x64/Dependency/mklml.dll"
+      ]
+    },
+    "CNTK.Deps.OpenCV.Zip/2.7.0": {
+      "sha512": "D9E47lasd9BLkkFm/4egjIled7/w+2K/wx3wRc8UzRdwnMt6dh4kwRJ4GRpdkPdvas0vHJht4S8BBFzmS5PbeA==",
+      "type": "package",
+      "path": "cntk.deps.opencv.zip/2.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/native/CNTK.Deps.OpenCV.Zip.targets",
+        "build/netstandard2.0/CNTK.Deps.OpenCV.Zip.targets",
+        "cntk.deps.opencv.zip.2.7.0.nupkg.sha512",
+        "cntk.deps.opencv.zip.nuspec",
+        "support/x64/Dependency/Debug/opencv_world310d.dll",
+        "support/x64/Dependency/Release/opencv_world310.dll",
+        "support/x64/Dependency/zip.dll",
+        "support/x64/Dependency/zlib.dll"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0-windows7.0": []
+    "net8.0-windows7.0": [
+      "CNTK.CPUOnly >= 2.7.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\pc\\.nuget\\packages\\": {}
@@ -45,6 +154,12 @@
     "frameworks": {
       "net8.0-windows7.0": {
         "targetAlias": "net8.0-windows",
+        "dependencies": {
+          "CNTK.CPUOnly": {
+            "target": "Package",
+            "version": "[2.7.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

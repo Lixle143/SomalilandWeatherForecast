@@ -1,2 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" />
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)cntk.deps.opencv.zip\2.7.0\build\netstandard2.0\CNTK.Deps.OpenCV.Zip.targets" Condition="Exists('$(NuGetPackageRoot)cntk.deps.opencv.zip\2.7.0\build\netstandard2.0\CNTK.Deps.OpenCV.Zip.targets')" />
+    <Import Project="$(NuGetPackageRoot)cntk.deps.mkl\2.7.0\build\netstandard2.0\CNTK.Deps.MKL.targets" Condition="Exists('$(NuGetPackageRoot)cntk.deps.mkl\2.7.0\build\netstandard2.0\CNTK.Deps.MKL.targets')" />
+    <Import Project="$(NuGetPackageRoot)cntk.cpuonly\2.7.0\build\netstandard2.0\CNTK.CPUOnly.targets" Condition="Exists('$(NuGetPackageRoot)cntk.cpuonly\2.7.0\build\netstandard2.0\CNTK.CPUOnly.targets')" />
+  </ImportGroup>
+</Project>

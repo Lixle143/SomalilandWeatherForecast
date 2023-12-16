@@ -5,7 +5,44 @@
   },
   "compilationOptions": {},
   "targets": {
-    ".NETCoreApp,Version=v8.0": {}
+    ".NETCoreApp,Version=v8.0": {
+      "CNTK.CPUOnly/2.7.0": {
+        "dependencies": {
+          "CNTK.Deps.MKL": "2.7.0",
+          "CNTK.Deps.OpenCV.Zip": "2.7.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Cntk.Core.Managed-2.7.dll": {
+            "assemblyVersion": "2.7.0.0",
+            "fileVersion": "2.7.0.0"
+          }
+        }
+      },
+      "CNTK.Deps.MKL/2.7.0": {},
+      "CNTK.Deps.OpenCV.Zip/2.7.0": {}
+    }
   },
-  "libraries": {}
+  "libraries": {
+    "CNTK.CPUOnly/2.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jRUSX0QnkYcSak2IGVMeeAzUcv8S22TJH9xxjJlqz7jFpeGUQU4DASOGjP4MDAq5RogBP1Fjm4v52GBSPMgAaA==",
+      "path": "cntk.cpuonly/2.7.0",
+      "hashPath": "cntk.cpuonly.2.7.0.nupkg.sha512"
+    },
+    "CNTK.Deps.MKL/2.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HvWCp8YNO9LKUrnd/ollB2zl75q0LpMRKirDsipSYDscjj6367YIva34v8bkPFtDA5OHRzHItyPCUeH0YGjYeA==",
+      "path": "cntk.deps.mkl/2.7.0",
+      "hashPath": "cntk.deps.mkl.2.7.0.nupkg.sha512"
+    },
+    "CNTK.Deps.OpenCV.Zip/2.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-D9E47lasd9BLkkFm/4egjIled7/w+2K/wx3wRc8UzRdwnMt6dh4kwRJ4GRpdkPdvas0vHJht4S8BBFzmS5PbeA==",
+      "path": "cntk.deps.opencv.zip/2.7.0",
+      "hashPath": "cntk.deps.opencv.zip.2.7.0.nupkg.sha512"
+    }
+  }
 }
