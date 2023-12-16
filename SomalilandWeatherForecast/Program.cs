@@ -1,4 +1,4 @@
-using CNTK;
+
 namespace SomalilandWeatherForecast
 {
     internal static class Program
@@ -11,8 +11,12 @@ namespace SomalilandWeatherForecast
         {
 
             // see https://aka.ms/applicationconfiguration.
+            if (Environment.Is64BitOperatingSystem || Environment.Is64BitProcess)
+            {
+                
+            }
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            Application.Run(new MainWindow());
         }
     }
 }
