@@ -15,5 +15,7 @@ namespace SomalilandWeatherForecast.Entities
 
         public string City { set; get; }
 
+        public string Coordinate {  set; get; }
+
     }
 }

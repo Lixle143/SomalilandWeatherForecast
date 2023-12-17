@@ -37,13 +37,15 @@
             dateTimePicker1 = new DateTimePicker();
             monthCalendar1 = new MonthCalendar();
             progressBar1 = new ProgressBar();
-            pictureBox1 = new PictureBox();
             domainUpDown1 = new DomainUpDown();
+            checkedListBox1 = new CheckedListBox();
+            pictureBox2 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)splitContainer2).BeginInit();
+            splitContainer2.Panel2.SuspendLayout();
             splitContainer2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // button1
@@ -100,6 +102,11 @@
             splitContainer2.Location = new Point(15, 171);
             splitContainer2.Name = "splitContainer2";
             splitContainer2.Orientation = Orientation.Horizontal;
+            // 
+            // splitContainer2.Panel2
+            // 
+            splitContainer2.Panel2.Controls.Add(checkedListBox1);
+            splitContainer2.Panel2.Controls.Add(domainUpDown1);
             splitContainer2.Size = new Size(374, 158);
             splitContainer2.SplitterDistance = 79;
             splitContainer2.TabIndex = 5;
@@ -113,7 +120,7 @@
             // 
             // monthCalendar1
             // 
-            monthCalendar1.Location = new Point(561, 47);
+            monthCalendar1.Location = new Point(561, 36);
             monthCalendar1.Name = "monthCalendar1";
             monthCalendar1.TabIndex = 7;
             // 
@@ -124,33 +131,41 @@
             progressBar1.Size = new Size(175, 25);
             progressBar1.TabIndex = 8;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Location = new Point(425, 12);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 87);
-            pictureBox1.TabIndex = 9;
-            pictureBox1.TabStop = false;
-            // 
             // domainUpDown1
             // 
             domainUpDown1.Items.Add("temperature");
             domainUpDown1.Items.Add("pressure");
             domainUpDown1.Items.Add("humidity");
             domainUpDown1.Items.Add("precipitation");
-            domainUpDown1.Location = new Point(524, 335);
+            domainUpDown1.Location = new Point(129, 49);
             domainUpDown1.Name = "domainUpDown1";
             domainUpDown1.Size = new Size(120, 23);
             domainUpDown1.TabIndex = 10;
             domainUpDown1.Text = "parameter";
+            // 
+            // checkedListBox1
+            // 
+            checkedListBox1.FormattingEnabled = true;
+            checkedListBox1.Items.AddRange(new object[] { "LSTM", "GRU", "BIDirectionalRNN" });
+            checkedListBox1.Location = new Point(3, 17);
+            checkedListBox1.Name = "checkedListBox1";
+            checkedListBox1.Size = new Size(120, 58);
+            checkedListBox1.TabIndex = 11;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Location = new Point(407, 12);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(132, 110);
+            pictureBox2.TabIndex = 12;
+            pictureBox2.TabStop = false;
             // 
             // MainWindow
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(domainUpDown1);
-            Controls.Add(pictureBox1);
+            Controls.Add(pictureBox2);
             Controls.Add(progressBar1);
             Controls.Add(monthCalendar1);
             Controls.Add(dateTimePicker1);
@@ -165,9 +180,10 @@
             Load += MainWindow_Load;
             ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
             splitContainer1.ResumeLayout(false);
+            splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)splitContainer2).EndInit();
             splitContainer2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
         }
 
@@ -183,7 +199,8 @@
         private DateTimePicker dateTimePicker1;
         private MonthCalendar monthCalendar1;
         private ProgressBar progressBar1;
-        private PictureBox pictureBox1;
         private DomainUpDown domainUpDown1;
+        private CheckedListBox checkedListBox1;
+        private PictureBox pictureBox2;
     }
 }

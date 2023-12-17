@@ -8,5 +8,14 @@ namespace SomalilandWeatherForecast.Entities
 {
     internal class NNParameters
     {
+        public NNParameters(int weight , int loss)
+        {
+            
+        }
+
+        public NNParameters(int weight , int loss , string optimizer)
+        { 
+
+        }
     }
 }

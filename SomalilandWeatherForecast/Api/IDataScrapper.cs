@@ -8,5 +8,10 @@ namespace SomalilandWeatherForecast.Api
 {
     internal interface IDataScrapper
     {
+        // private string header = "";
+
+        public string ConvertData2CSV(Dictionary<string  ,string>data);
+        public void ParseHTML(string html_data);
+        //string Header { get; set; }
     }
 }

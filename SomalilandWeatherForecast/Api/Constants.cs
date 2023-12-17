@@ -3,37 +3,69 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using SomalilandWeatherForecast.Interfaces;
 namespace SomalilandWeatherForecast.Api
 {
-    internal class Constants
+    internal class Constants:INNTrain
     {
         static string url = "https://weatherapi.com";
-        enum Regions
+
+        string start_date = "";
+        string end_date = " ";
+
+        
+        public long loss { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public long weight { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        struct NNParams
         {
-            string maroodijeeh;
-            string sahil;
-            string sool;
-            string sanaag;
-            string awdal;
-            string togdher;
+            int weight;
+            int loss;
+            string optimizer;
+        }
+        struct Coordinate
+        {
+            string maroodijeeh = "maroodijeeh";
+            string sahil = "saahil";
+            string sool = "sool";
+            string sanaag = "sanaag";
+            string awdal = "awdal";
+            string togdher = "togdher";
+            string gabilay = "gabilay";
+            string baki = "baki";
+            string ainabo = "ainabo";
+            string zeila = "zeila";
+            string buhodle = "buhodle";
+
+            enum Region
+            {
+                hargeisa,
+                borama,
+                berbera,
+                burao,
+                erigabo,
+                lasanod,
+            }
+
+            public Coordinate()
+            {
+            }
         }
         
-        enum Coordinates
+
+       public enum WeatherParams
         {
-            string hargeisa;
-            string borama;
-            string berbera;
-            string burao;
-            string erigabo;
-            string lasanod;
+         minimum_temperature,
+         maximum_temperature,
+         humidity,
+         precipitation,
+         wind_speed,
+         wind_blow_angle,
         }
 
-        enum WeatherParameters
+        public string DataScrapper(string url)
         {
-         int minimum_temperature;
-         int maximum_temperature;
-         int humidity;
+            throw new NotImplementedException();
         }
     }
 }
