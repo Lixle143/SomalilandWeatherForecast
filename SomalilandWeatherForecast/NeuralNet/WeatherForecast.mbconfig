@@ -1,10 +1,410 @@
 ﻿{
-  "Scenario": "Default",
+  "Scenario": "Forecasting",
+  "DataSource": {
+    "Type": "TabularFile",
+    "Version": 1,
+    "FilePath": "C:\\Users\\pc\\source\\repos\\SomalilandWeatherForecast\\SomalilandWeatherForecast\\Data\\somaliland.csv",
+    "Delimiter": ",",
+    "DecimalMarker": ".",
+    "HasHeader": true,
+    "ColumnProperties": [
+      {
+        "ColumnName": "name",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "datetime",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "tempmax",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "tempmin",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "temp",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "feelslikemax",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "feelslikemin",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "feelslike",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "dew",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "humidity",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "precip",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "precipprob",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "precipcover",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "preciptype",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "snow",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "snowdepth",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "windgust",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "windspeed",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "winddir",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "sealevelpressure",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "cloudcover",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "visibility",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "solarradiation",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "solarenergy",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "uvindex",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "severerisk",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "sunrise",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "sunset",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "moonphase",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "conditions",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "description",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "icon",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "stations",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      }
+    ]
+  },
+  "Environment": {
+    "Type": "LocalCPU",
+    "Version": 1
+  },
+  "RunHistory": {
+    "Version": 3,
+    "Type": "Result",
+    "Trials": [
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "ForecastBySsa",
+        "Score": 1.2578892757669364,
+        "RuntimeInSeconds": 0.158,
+        "Parameter": {
+          "_SCHEMA_": "e0",
+          "e0": {
+            "WindowSize": 3,
+            "SeriesLength": 5,
+            "TrainSize": 958,
+            "Horizon": 10,
+            "OutputColumnName": "feelslikemax",
+            "InputColumnName": "feelslikemax",
+            "ConfidenceLowerBoundColumn": "feelslikemax_LB",
+            "ConfidenceUpperBoundColumn": "feelslikemax_UB"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "ForecastBySsa",
+        "Score": 1.2578892757669364,
+        "RuntimeInSeconds": 0.044,
+        "Parameter": {
+          "_SCHEMA_": "e0",
+          "e0": {
+            "WindowSize": 3,
+            "SeriesLength": 16,
+            "TrainSize": 958,
+            "Horizon": 10,
+            "OutputColumnName": "feelslikemax",
+            "InputColumnName": "feelslikemax",
+            "ConfidenceLowerBoundColumn": "feelslikemax_LB",
+            "ConfidenceUpperBoundColumn": "feelslikemax_UB"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "ForecastBySsa",
+        "Score": 1.2578892757669364,
+        "RuntimeInSeconds": 0.041,
+        "Parameter": {
+          "_SCHEMA_": "e0",
+          "e0": {
+            "WindowSize": 3,
+            "SeriesLength": 45,
+            "TrainSize": 958,
+            "Horizon": 10,
+            "OutputColumnName": "feelslikemax",
+            "InputColumnName": "feelslikemax",
+            "ConfidenceLowerBoundColumn": "feelslikemax_LB",
+            "ConfidenceUpperBoundColumn": "feelslikemax_UB"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "ForecastBySsa",
+        "Score": 1.2578892757669364,
+        "RuntimeInSeconds": 0.05,
+        "Parameter": {
+          "_SCHEMA_": "e0",
+          "e0": {
+            "WindowSize": 3,
+            "SeriesLength": 5,
+            "TrainSize": 958,
+            "Horizon": 10,
+            "OutputColumnName": "feelslikemax",
+            "InputColumnName": "feelslikemax",
+            "ConfidenceLowerBoundColumn": "feelslikemax_LB",
+            "ConfidenceUpperBoundColumn": "feelslikemax_UB"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "ForecastBySsa",
+        "Score": 1.2578892757669364,
+        "RuntimeInSeconds": 0.044,
+        "Parameter": {
+          "_SCHEMA_": "e0",
+          "e0": {
+            "WindowSize": 3,
+            "SeriesLength": 130,
+            "TrainSize": 958,
+            "Horizon": 10,
+            "OutputColumnName": "feelslikemax",
+            "InputColumnName": "feelslikemax",
+            "ConfidenceLowerBoundColumn": "feelslikemax_LB",
+            "ConfidenceUpperBoundColumn": "feelslikemax_UB"
+          }
+        }
+      }
+    ],
+    "Estimators": {
+      "e0": "ForecastBySsa"
+    },
+    "Schema": "e0",
+    "MetricName": "RMSE",
+    "ModelFilePath": "C:\\Users\\pc\\source\\repos\\SomalilandWeatherForecast\\SomalilandWeatherForecast\\NeuralNet\\WeatherForecast.mlnet"
+  },
   "Type": "TrainingConfig",
   "Version": 4,
   "TrainingOption": {
-    "Version": 1,
-    "Type": "DefaultTrainingOption",
-    "TrainingTime": 0
+    "Version": 2,
+    "Type": "ForecastingTrainingOption",
+    "TrainingTime": 60,
+    "UseCrossValidation": false,
+    "OptimizeMetric": "RMSE",
+    "Horizon": 10,
+    "LabelColumn": "feelslikemax",
+    "UseDefaultIndex": true,
+    "ValidationOption": {
+      "Version": 0,
+      "Type": "CrossValidationValidationOption",
+      "NumberOfFolds": 5
+    }
   }
 }

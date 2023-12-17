@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SomalilandWeatherForecast.Interfaces;
-
+using ScrapySharp.Network;
 namespace SomalilandWeatherForecast.Api
 {
     internal class DataScrapper : IDataScrapper

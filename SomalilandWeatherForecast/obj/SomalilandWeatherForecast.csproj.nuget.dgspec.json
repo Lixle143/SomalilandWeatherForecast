@@ -43,6 +43,26 @@
             "CNTK.CPUOnly": {
               "target": "Package",
               "version": "[2.7.0, )"
+            },
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[30.0.1, )"
+            },
+            "HtmlAgilityPack": {
+              "target": "Package",
+              "version": "[1.11.55, )"
+            },
+            "Microsoft.ML.TimeSeries": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "ScrapySharp": {
+              "target": "Package",
+              "version": "[3.0.0, )"
             }
           },
           "imports": [
