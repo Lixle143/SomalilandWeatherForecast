@@ -19,10 +19,14 @@ namespace SomalilandWeatherForecast.Entities
         public int humidity { get; set;}
         public int wind_speed { get; set;}
 
-        public void extract_weather_params <T>()
-        where T : Constants.WeatherParams
+        struct WeatherSettings
         {
 
+            enum WEATHER_TYPE
+            {
+                current,
+                historical,
+            }
         }
     }
 }

@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SomalilandWeatherForecast.Interfaces;
+using SomalilandWeatherForecast.Entities;
 namespace SomalilandWeatherForecast.Api
 {
-    internal class Constants:INNTrain
+    internal class Constants:Location , INNTrain
     {
-        static string url = "https://weatherapi.com";
-
+        static string historical_data = "41056e82a947f01076f2a4c54a5cfba9";
+        static string normal = "41056e82a947f01076f2a4c54a5cfba9";
         string start_date = "";
         string end_date = " ";
 
@@ -47,24 +48,38 @@ namespace SomalilandWeatherForecast.Api
                 lasanod,
             }
 
-            public Coordinate()
+            public Coordinate(string latitude , string longtitude)
             {
+                this.latitude = latitude;
+                this.longtitude = longtitude;
             }
         }
         
 
-       public enum WeatherParams
+       public class WeatherParams
         {
-         minimum_temperature,
-         maximum_temperature,
-         humidity,
-         precipitation,
-         wind_speed,
-         wind_blow_angle,
+         int minimum_temperature;
+         int maximum_temperature;
+         int humidity;
+         int precipitation;
+         int wind_speed;
+         int wind_blow_angle;
         }
 
         public string DataScrapper(string url)
         {
+            try
+            {
+
+            }
+            catch(HttpIOException)
+            {
+                Console.WriteLine("HTTP IO exception ... ");
+            }
+            catch (IOException)
+            {
+                Console.WriteLine("IO Exception caught...")
+            }
             throw new NotImplementedException();
         }
     }

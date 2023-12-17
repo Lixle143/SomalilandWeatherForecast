@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using SomalilandWeatherForecast.Api;
 namespace SomalilandWeatherForecast.Entities
 {
-    internal class Location
+    abstract class Location
     {
         public Location()
         {
