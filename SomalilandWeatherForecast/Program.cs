@@ -19,7 +19,7 @@ namespace SomalilandWeatherForecast
             // see https://aka.ms/applicationconfiguration.
             if (Environment.Is64BitOperatingSystem || Environment.Is64BitProcess)
             {
-                
+
             }
             ApplicationConfiguration.Initialize();
             Application.Run(new MainWindow());
