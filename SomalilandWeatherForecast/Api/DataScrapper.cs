@@ -4,24 +4,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SomalilandWeatherForecast.Interfaces;
-using ScrapySharp.Network;
+using HtmlAgilityPack;
+using CsvHelper;
+using System.Globalization;
+using CsvHelper.Configuration;
+using Newtonsoft.Json;
 namespace SomalilandWeatherForecast.Api
 {
     internal class DataScrapper : IDataScrapper
     {
-        static async Task ScrapData()
+        public async Task<String> ScrapData(String url)
         {
+            var client = new HttpClient();
 
+            var request = new HttpRequestMessage(HttpMethod.Get, url);
+
+            var response = await client.SendAsync(request);
+            if(!response.IsSuccessStatusCode)
+            {
+                Console.WriteLine(response.StatusCode.ToString());
+            }
+
+            var body = await response.Content.ReadAsStringAsync();
+            var result = await request.Content.ReadAsStringAsync(); // From the URL query code above 
+            return result;
+            // dynamic weather = JsonConvert.DeserializeObject(result);
         }
 
-        public string ConvertData2CSV(Dictionary<string, string> data)
+        public async void  ConvertData2CSVAsync<T>(String data , List<T>records)
         {
-            throw new NotImplementedException();
+            using(StreamWriter sw = new StreamWriter(data))
+            using(CsvWriter csv_write = new CsvWriter(sw , CultureInfo.InvariantCulture))
+            {
+                csv_write.WriteRecords(records);
+            }
         }
 
-        public void ParseHTML(string html_data)
-        {
-            throw new NotImplementedException();
-        }
+    
     }
 }

@@ -10,8 +10,8 @@ namespace SomalilandWeatherForecast.Interfaces
     {
         // private string header = "";
 
-        public string ConvertData2CSV(Dictionary<string, string> data);
-        public void ParseHTML(string html_data);
+        public void ConvertData2CSVAsync<T>(string data , List<T>records);
+        public Task<string> ScrapData(string url);
         //string Header { get; set; }
     }
 }
