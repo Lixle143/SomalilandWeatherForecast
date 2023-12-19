@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
+using SomalilandWeatherForecast.Api;
+using SomalilandWeatherForecast.Interfaces;
 namespace SomalilandWeatherForecast.Api
 {
     internal class Constants
@@ -13,6 +16,18 @@ namespace SomalilandWeatherForecast.Api
         string start_date { get; set; }
         string end_date { get; set; }
 
+        public DataScrapper dataScrap = new DataScrapper();
+
+        public String printWeatherData()
+        {
+            var records = new List<String>
+            {
+
+            };
+            String data = dataScrap.ScrapData(url).ToString();
+            dataScrap.ConvertData2CSVAsync( data, records );
+            return "";
+        }
         
         struct Coordinate
         {
