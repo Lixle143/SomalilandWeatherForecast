@@ -5,6 +5,7 @@ using System.Security.Cryptography;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 using SomalilandWeatherForecast.Api;
 using SomalilandWeatherForecast.Interfaces;
 namespace SomalilandWeatherForecast.Api
@@ -26,6 +27,20 @@ namespace SomalilandWeatherForecast.Api
             };
             String data = dataScrap.ScrapData(url).ToString();
             dataScrap.ConvertData2CSVAsync( data, records );
+            dynamic weather = JsonConvert.DeserializeObject(data);
+            foreach (var day in weather.days)
+            {
+                string weather_date = day.datetime;
+                string weather_desc = day.description;
+                string weather_tmax = day.tempmax;
+                string weather_tmin = day.tempmin;
+
+                Console.WriteLine("Forecast for date: " + weather_date);
+                Console.WriteLine(" General conditions: " + weather_desc);
+                Console.WriteLine(" The high temperature will be " + weather_tmax);
+                Console.WriteLine(" The low temperature will be: " + weather_tmin);
+            }
+
             return "";
         }
         
