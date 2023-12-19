@@ -1,47 +1,47 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 namespace SomalilandWeatherForecast.Api
 {
     internal class Constants
     {
-        static string historical_data = "41056e82a947f01076f2a4c54a5cfba9";
-        static string normal = "41056e82a947f01076f2a4c54a5cfba9";
-        string start_date = "";
-        string end_date = " ";
+        public const string API_KEY = "41056e82a947f01076f2a4c54a5cfba9";
+        public string url = "https://api.openweathermap.org/data/3.0/onecall?lat=33.44&lon=-94.04&exclude=hourly,daily&appid={API key}";
+        string start_date { get; set; }
+        string end_date { get; set; }
 
         
         struct Coordinate
         {
-            string maroodijeeh = "maroodijeeh";
-            string sahil = "saahil";
-            string sool = "sool";
-            string sanaag = "sanaag";
-            string awdal = "awdal";
-            string togdher = "togdher";
+            string hargeysa = "";
+            string boorama = "";
+            string burco = "";
+            string ceerigabo = "";
+            string laascanood = "";
+            string berbera = "";
             string gabilay = "gabilay";
             string baki = "baki";
-            string ainabo = "ainabo";
-            string zeila = "zeila";
+            string caynabo = "ainabo";
+            string saylac = "zeila";
             string buhodle = "buhodle";
+
+            public Coordinate()
+            {
+            }
 
             enum Region
             {
-                hargeisa,
-                borama,
-                berbera,
-                burao,
-                erigabo,
-                lasanod,
-            }
+             maroodijeeh,
+             sahil,
+             sool,
+             sanaag,
+             awdal,
+             togdher,
+        }
 
-            public Coordinate(string latitude , string longtitude)
-            {
-                this.latitude = latitude;
-                this.longtitude = longtitude;
-            }
         }
         
 
